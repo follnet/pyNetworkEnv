@@ -8,7 +8,7 @@ print("If you do want that, hit RETURN")
 
 input("?")
 print("Opening the file...")
-target = open(filename, 'w')
+target = open(filename, 'w+')
 
 # print("Truncating the file. Goodbye!")
 # target.truncate()
@@ -23,6 +23,10 @@ print("I'm going to write these to the file.")
 
 target.write(line1 + "\n" + line2 + "\n" + line3)
 
+# 移动到文件的初始地方开始读取，move to start of the file
+target.seek(0)
+
+print(target.read())
 # target.write(line1)
 # target.write("\n")
 # target.write(line2)
@@ -33,7 +37,7 @@ target.write(line1 + "\n" + line2 + "\n" + line3)
 print("And finally, we close it.")
 target.close()
 
-file = open(filename)
-txt = file.read()
-print("===========")
-print(txt)
+# file = open(filename)
+# txt = file.read()
+# print("===========")
+# print(txt)
