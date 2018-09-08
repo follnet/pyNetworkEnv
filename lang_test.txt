@@ -1,0 +1,4 @@
+router bgp 100
+neighbor 1.1.1.1 remote-as 200
+neighbor 1.1.1.1 update-source loopback0
+network 10.1.1.1 mask 255.255.255.255
