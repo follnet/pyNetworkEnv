@@ -1,4 +1,5 @@
 def print_two(*args):
+    # args实际为list
     # arg1, arg2 = args
     # print("arg1: %s, arg2: %s" % (arg1, arg2))
     print("arg1: %s, arg2: %s" % (args[0], args[1]))
